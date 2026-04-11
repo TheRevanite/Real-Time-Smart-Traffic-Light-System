@@ -1,5 +1,5 @@
 
-# Smart Traffic Signal Controller using Raspberry Pi
+# Real Time Smart Traffic System
 
 This project is designed to automate traffic signal timing based on live image processing. It utilizes a Raspberry Pi, Pi Camera 2, and GPIO components to dynamically adjust the green light duration according to traffic conditions.
 
