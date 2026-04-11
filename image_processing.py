@@ -42,10 +42,10 @@ def compute_match_percentage(image1, image2):
     bf = cv2.BFMatcher(cv2.NORM_HAMMING, crossCheck=True) #Creating BFMatcher object
     matches = bf.match(des1, des2) #Match descriptors
     matches = sorted(matches, key=lambda x: x.distance) #Sort them in the order of their distance
-    good_matches = [m for m in matches if m.distance < 50]  #Keep matches with distance < 50
-    num_good_matches = len(good_matches) #Count good matches
-    total_matches = len(matches) #Total matches found between the two images
-    keypoints_ratio = min(len(kp1), len(kp2)) / max(len(kp1), len(kp2)) #Calculate the keypoints ratio to balance keypoints of varying images
-    match_percentage = (num_good_matches / total_matches) * keypoints_ratio * 100 #Compute the final match percentage
+    good_matches = [m for m in matches if m.distance < 50]  # Keep matches with distance < 50
+    num_good_matches = len(good_matches) # Count good matches
+    total_matches = len(matches) # Total matches found between the two images
+    keypoints_ratio = min(len(kp1), len(kp2)) / max(len(kp1), len(kp2)) # Calculate the keypoints ratio to balance keypoints of varying images
+    match_percentage = (num_good_matches / total_matches) * keypoints_ratio * 100 # Compute the final match percentage
 
     return match_percentage

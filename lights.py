@@ -28,6 +28,7 @@ def light_on(index):
 def wait(duration):
     sleep(duration)
 
+
 def light_off(index):
     # Assuming index is 1-based and maps to a 1-based group of LEDs
     group = [leds['red'][index-1], leds['yellow'][index-1], leds['green'][index-1]]
